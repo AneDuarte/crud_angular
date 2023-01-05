@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Caneta Pentel Azul",
+      "preco": 7.49
+    },
+    {
+      "id": 2,
+      "nome": "Borracha BRW Branca",
+      "preco": 3.25
+    },
+    {
+      "id": 3,
+      "nome": "Lapiseira Cis 0.9",
+      "preco": 5.5
+    },
+    {
+      "nome": "Caderno Death Note Preto",
+      "preco": "15.70",
+      "id": 4
+    }
+  ]
+}
