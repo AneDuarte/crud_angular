@@ -1,0 +1,58 @@
+Typescript
+-Orientada a objetos
+-Tipagem forte
+-O código escrito em typescript é compilado para javescript
+-Superset do javascript
+
+Árvore de componente
+Começa com uma aplicação princiapl, a raiz:
+
+
+      --------------MyApp -------------
+      |					  |
+    Header                    ---- Content ----
+      |                       |		    |
+     Nav                ContentTitle     ProductCrud
+      |						    |
+  -- List --                          -- productForm --
+  |        |				  |               |
+Item	   Item                       Input          Button
+
+O arquivo main.ts é o primeiro arquivo chamado para inicializar a aplicação em Angular.Ele aceita código em javascript. Esse arquivo vai chamar o módulo da aplicação (AppModule). 
+
+A aplicação em Angular é organizada em componentes (como a árvore de componentes), esses componentes são organizados dentro de módulos, ou seja, a aplicação Angular é modularizada. Alguns componentes estão visíveis apenas dentro do módulo, que trás um maior nível de encapsulamento. 
+
+O AppModulo é criado por padrão quando você cria uma aplicação e ele é usado para a inicialização. Dentro do AppModulo existe um atributo chamado bootstrap. O bootstrap aponta para o AppComponent (componente criado por padrão). A partir do AppComponent toda a árvore de componentes será chamada.
+
+	main.ts
+	   |
+	   v
+	AppModule
+	   |
+	   v
+	AppComponent --> árvore de componentes
+
+Em resumo quando o main.ts é chamado o AppModule é carregado. Assim que carregado o primeiro componente é o que foi declarado no atributo bootstrap, que é o AppComponent. E dentro do AppComponent se faz as referências para outros componentes.
+
+O que é um Componente?
+Basicamente é um trecho de código que representa um componente visual da sua tela. O componenete Angular é formado por: HTML, CSS, TS
+
+Anatomia do Módulo
+
+Bootstrap -> App Component
+
+		 -> Components
+Declarations -> Diretivas
+		 -> Pipes
+
+	  -> Components
+Exports -> Diretivas
+	  -> Pipes
+
+	  -> Module A
+Imports -> Module B
+	  -> Module C
+
+	    -> Service A
+Providers -> Service B
+	    -> Service C
