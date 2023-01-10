@@ -1,0 +1,67 @@
+Elementos do Angular
+
+-Componentes: são formados por 3 partes, HTML, CSS, TS. Não é obrigatório ter estilo (css) nem o arquivo html (ele pode ser no arquivo .ts)
+
+-Diretivas 
+Attribute Directives:
+Altera a aparência e o comportamento de um elemento, componente ou outra diretiva.
+
+Structural Directives:
+Altera o layout adicionando e removendo elementos da DOM. Esse tipo de diretiva tem um * na frente (*ngIf)
+
+-Binding
+Property Binding
+É uma ligação que permite acessar uma varável do arquivo ts dentro do html. Para isso se usa []. A aplicação vai olhar pro conteudo que estiver sendo atribuido ao [...] no html e procurar no componente um atributo com o mesmo nome.
+
+Ex.: [dataSource]="products" (código html)
+products: Product[]; (código ts)
+
+Ou seja, vai aparecer o conteúdo do componente no html.
+
+Event Binding
+Serve para ligar um determinado evento a um método usando (). Quando ele fizer a ação do html ele vai chamar o método no componente.
+
+One Way Data Binding
+Liga o componente ao html em apenas uma direção. Ex.: o valor de uma variável no componente que vai ser aplicada no html.
+
+Se eu alterar o valor no componente, ele também será alterado no html.
+
+Two Way Data Binding
+Faz uma ligação que se aplica nas duas direções. Se eu mudar o valor da variável no componente, também será mudado no html. E se eu mudar no input no html também será alterado no componente. Usa [(ngModel)]
+
+-Angular Routing (rotas)
+A rota irá direcionar para o componente. Se eu clico num botão home e a url /home é selecionada automaticamente o componente home será carregado no Router Outlet.
+
+Router Outlet é um componente que faz parte do Angular Router e irá injear dentro dele os componentes de acordo com a navegação que foi feita.
+
+O que vai dizer a navegação vai ser a url do componente que foi mapeado.
+
+Se o usuário clicar em outro botão que leve pra outra url automaticamente ele vai trocar os componentes.
+
+-Angular Pipes
+São processamentos que você faz em cima de variáveis. Pode usar pipes para fazer uma formatação de dado por exemplo. Usa o símbolo | e passa o método a ser chamado.
+
+Alguns pipes pode, receber parâmetros:
+{{ product.price | currency: 'BRL' }}
+
+Também é possível ter uma cadeia de processamentos, ou seja, uma cadeira de pipes:
+{{ produto.vencimento | date: 'fullDate' | uppercase }}
+
+Isso é chamado de chaining (encadeamento)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
